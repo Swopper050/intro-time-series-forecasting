@@ -1,3 +1,3 @@
 # Time-Series
 
-Simple repository to study and implement basic Time Series stuff
+Simple repository to (self) study and implement basic Time Series stuff
