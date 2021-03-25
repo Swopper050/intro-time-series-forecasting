@@ -53,11 +53,9 @@ def exp_trend(df, ax_main, ax_residuals):
     ax_residuals.legend()
 
 
-
-
 def main():
     fig, axes = plt.subplots(2, 2, sharex=False, sharey=False)
-    df = pd.read_csv("data/shampoo.csv", index_col="Month")
+    df = pd.read_csv("../data/shampoo.csv", index_col="Month")
     linear_trend(df, axes[0, 0], axes[1, 0])
     exp_trend(df, axes[0, 1], axes[1, 1])
     plt.show()
