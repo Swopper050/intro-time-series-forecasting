@@ -63,3 +63,21 @@ def plot_ACVF(series, *, max_lag):
     ax_acvf.set_title("Autocovariance values for the time series for various lags")
 
     plt.show()
+
+
+def plot_residuals(ax, x_vals, series, estimated_series):
+    """
+    Plots the residual values given two series.
+
+    :param ax: ax to plot on
+    :param x_vals: x values corresponding to the series
+    :param series: np.ndarray with original series
+    :param estimated_series: np.ndarray with the estimated series
+    """
+    residuals = series - estimated_series
+    ax.plot(x_vals, residuals, color="red", marker="o", markersize=2, label="residuals")
+    ax.axhline(y=0, xmin=0, xmax=len(series), color="black", linestyle="--", alpha=0.5)
+    ax.set_title("Residuals")
+    ax.legend()
+
+
